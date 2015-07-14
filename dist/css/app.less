@@ -1,0 +1,53 @@
+@import "../bower/normalize.css/normalize.css";
+@import "roboto";
+
+@baseBlue: #27348B;
+
+body {
+  padding-top: 44px;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@navbar-height: 50px;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: @baseBlue;
+  height: @navbar-height;
+
+  ul.nav {
+    width: 70%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    height: @navbar-height;
+    display: flex;
+    li {
+      display: flex;
+      align-items: center;
+      &:hover {
+        background: lighten(@baseBlue, 4%);
+      }
+      a {
+        display: block;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        outline: none;
+        padding: 0 15px;
+        &.nav-image-link {
+          padding: 0 5px;
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+}

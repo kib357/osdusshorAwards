@@ -1,0 +1,15 @@
+{
+  "name": "osdusshor-awards",
+  "repository": "https://github.com/kib357/osdusshorAwards",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "latest",
+    "compression": "latest",
+    "express": "latest",
+    "less": "latest"
+  },
+  "engine": "node >= 0.10.17",
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}

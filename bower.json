@@ -1,0 +1,10 @@
+{
+  "name": "osdusshor-awards",
+  "description": "Osdusshor sport awards and photo-exhibition",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kib357/osdusshorAwards",
+  "license": "",
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}
