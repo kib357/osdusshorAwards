@@ -2,10 +2,40 @@
 @import "roboto";
 
 @baseBlue: #27348B;
+@baseGreen: #00983A;
 
 body {
-  padding-top: 44px;
+  padding-top: 50px;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
 }
 
 @navbar-height: 50px;
@@ -14,11 +44,11 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   background-color: @baseBlue;
   height: @navbar-height;
 
   ul.nav {
-    width: 70%;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -49,5 +79,124 @@ body {
         }
       }
     }
+  }
+}
+
+.container {
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+  @media (min-width: 1440px) {
+    width: 1410px;
+  }
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.two-columns {
+  & > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 49%;
+    }
+    flex-shrink: 0;
+    padding: 20px 15px 20px 15px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(200,200,200,0.2);
+    }
+  }
+  .ordered-block {
+    position: relative;
+    min-height: 80px;
+    font-weight: 300;
+    .circle {
+      position: absolute;
+    }
+    div:last-of-type {
+      padding-left: 55px;
+    }
+  }
+}
+
+.circle
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+}
+
+.jumbo-1 {
+  height: 150px;
+}
+
+.jumbo-2 {
+  background-color: @baseGreen;
+  padding: 40px 0;
+  .carousel {
+    margin: 0 auto;
+    width: 630px;
+    height: 420px;
+    background-color: @baseBlue;
+    border: solid 4px white;
+  }
+}
+
+.list-block {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  .container {
+    position: relative;
+  }
+  .img-header {
+    position: absolute;
+  }
+  h2 {
+    text-transform: uppercase;
+    margin-left: 90px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
+}
+
+.nominations {
+  .img-header {
+    left: 20px;
+  }
+  h2 {
+    color: @baseBlue;
+  }
+  .circle {
+    background-color: @baseBlue;
+  }
+}
+
+.goals {
+  background-color: #eeeeee;
+  .img-header {
+    left: 20px;
+  }
+  h2 {
+    color: @baseGreen;
+  }
+  .circle {
+    background-color: @baseGreen;
   }
 }
