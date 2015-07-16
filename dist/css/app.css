@@ -469,6 +469,33 @@ h6 {
 .landing .stages .stages-list .vhr:last-child {
   border: 1px solid transparent;
 }
+.landing .docs a {
+  display: inline-block;
+  margin: 10px 0;
+  text-decoration: none !important;
+  color: black;
+  font-size: 24px;
+  font-weight: 300;
+}
+.landing .docs a span {
+  opacity: 0.6;
+  transition: opacity .1s linear;
+}
+.landing .docs a:hover span {
+  opacity: 1;
+}
+.landing .docs a:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  margin-right: 15px;
+  background-color: #00983a;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
+}
 .contacts .map {
   margin: 20px 0;
 }

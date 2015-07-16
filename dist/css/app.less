@@ -330,6 +330,38 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+
+  .docs {
+    a {
+      display: inline-block;
+      margin: 10px 0;
+      text-decoration: none !important;
+      color: black;
+      font-size: 24px;
+      font-weight: 300;
+      span {
+        opacity: 0.6;
+        transition: opacity .1s linear;
+      }
+      &:hover {
+        span {
+          opacity: 1;
+        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 18px;
+        margin-right: 15px;
+        background-color: @baseGreen;
+        -webkit-transform: skew(-20deg);
+        -moz-transform: skew(-20deg);
+        -o-transform: skew(-20deg);
+        transform: skew(-20deg);
+      }
+    }
+  }
 }
 
 .contacts {
