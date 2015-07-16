@@ -342,7 +342,7 @@ h6 {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff\9;
+  background-color: #fff \9;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 15px;
 }
@@ -468,4 +468,23 @@ h6 {
 }
 .landing .stages .stages-list .vhr:last-child {
   border: 1px solid transparent;
+}
+.contacts .map {
+  margin: 20px 0;
+}
+.contacts .contacts-text {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .contacts .contacts-text {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .contacts .contacts-text {
+    font-size: 30px;
+  }
 }
