@@ -5,6 +5,8 @@
   "homepage": "https://github.com/kib357/osdusshorAwards",
   "license": "",
   "dependencies": {
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "scrollReveal.js": "~2.3.2",
+    "velocity": "~1.2.2"
   }
 }

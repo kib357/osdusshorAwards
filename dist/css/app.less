@@ -1,5 +1,6 @@
 @import "../bower/normalize.css/normalize.css";
 @import "roboto";
+@import "slides";
 
 @baseBlue: #27348B;
 @baseGreen: #00983A;
@@ -10,11 +11,16 @@ body {
   font-size: 16px;
 }
 
+.disable-hover {
+  pointer-events: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -49,11 +55,15 @@ h1, h2, h3, h4, h5, h6 {
   height: @navbar-height;
 
   ul.nav {
-    list-style: none;
+    display: none;
+    @media (min-width: 992px) {
+      display: flex;
+    }
+    height: @navbar-height;
     margin: 0 auto;
     padding: 0;
-    height: @navbar-height;
-    display: flex;
+    list-style: none;
+
     li {
       display: flex;
       align-items: center;
@@ -114,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(200,200,200,0.2);
+      background-color: rgba(200, 200, 200, 0.2);
     }
   }
   .ordered-block {
@@ -130,8 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.circle
-{
+.circle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -143,121 +152,181 @@ h1, h2, h3, h4, h5, h6 {
   background: #000;
 }
 
-@fixed-width: 630px;
-
-.jumbo-1 {
-  padding: 30px 0;
-  .title {
-    margin: 0 auto;
-    width: @fixed-width;
-  }
-}
-
-.jumbo-2 {
-  background-color: @baseGreen;
-  padding: 30px 0;
-  .carousel {
-    margin: 0 auto;
-    width: @fixed-width;
-    height: 420px;
-  }
-}
-
-.list-block {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  .container {
-    position: relative;
-  }
-  .img-header {
+.carousel {
+  position: relative;
+  .c-slide {
     position: absolute;
-  }
-  h2 {
-    text-transform: uppercase;
-    margin-left: 110px;
-    padding-top: 15px;
-    padding-bottom: 50px;
-  }
-}
-
-.nominations {
-  .img-header {
-    left: 30px;
-  }
-  h2 {
-    color: @baseBlue;
-  }
-  .circle {
-    background-color: @baseBlue;
-  }
-}
-
-.goals {
-  background-color: #eeeeee;
-  .img-header {
-    left: 30px;
-  }
-  h2 {
-    color: @baseGreen;
-  }
-  .circle {
-    background-color: @baseGreen;
-  }
-}
-
-.stages {
-  padding-top: 30px;
-  padding-bottom: 20px;
-
-  h2 {
-    color: @baseBlue;
-    text-transform: uppercase;
-  }
-  .stages-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    & > div {
-      flex-shrink: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    img {
+      width: 100%;
     }
-    .stage {
-      width: 220px;
-      .number {
-        margin: 20px auto 0;
-        width: 130px;
-        background-color: @baseGreen;
-        text-align: center;
-        -webkit-transform: skew(-20deg);
-        -moz-transform: skew(-20deg);
-        -o-transform: skew(-20deg);
-        transform: skew(-20deg);
-        span {
-          display: inline-block;
-          padding: 5px;
-          color: white;
-          font-size: 18px;
-          font-weight: 500;
-          -webkit-transform: skew(20deg);
-          -moz-transform: skew(20deg);
-          -o-transform: skew(20deg);
-          transform: skew(20deg);
+    &:first-child {
+      position: inherit;
+    }
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .c-indicators {
+    position: absolute;
+    bottom: 15px;
+    right: 10%;
+    z-index: 15;
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: #fff\9;
+      background-color: rgba(255,255,255,0.4);
+      border-radius: 15px;
+
+      &.active {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.landing {
+  h2 {
+    text-transform: uppercase;
+  }
+
+  & > div {
+    padding: 30px 0;
+    h2 {
+      color: @baseBlue;
+    }
+    .circle {
+      background-color: @baseBlue;
+    }
+  }
+  & > div:nth-child(2n+0) {
+    h2 {
+      color: @baseGreen;
+    }
+    .circle {
+      background-color: @baseGreen;
+    }
+    background-color: #eeeeee;
+  }
+
+  @fixed-width: 630px;
+
+  .jumbo-1 {
+    .title {
+      margin: 0 auto;
+      width: 90%;
+      @media (min-width: 700px) {
+        width: @fixed-width;
+      }
+    }
+  }
+
+  .jumbo-2 {
+    background-color: @baseGreen !important;
+    .carousel-container {
+      margin: 0 auto;
+      width: 90%;
+      @media (min-width: 700px) {
+        width: @fixed-width;
+        height: 420px;
+      }
+    }
+  }
+
+  .list-block {
+    .container {
+      position: relative;
+    }
+    .img-header {
+      position: absolute;
+      left: 30px;
+      width: 40px;
+      @media (min-width: 700px) {
+        width: 70px;
+      }
+    }
+    h2 {
+      margin-left: 80px;
+      padding-bottom: 20px;
+      padding-top: 15px;
+      @media (min-width: 700px) {
+        margin-left: 110px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  .nominations {
+  }
+
+  .goals {
+  }
+
+  .stages {
+    .stages-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      text-align: center;
+      & > div {
+        flex-shrink: 0;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .stage {
+        width: 220px;
+        .number {
+          margin: 20px auto 0;
+          width: 130px;
+          background-color: @baseGreen;
+          text-align: center;
+          -webkit-transform: skew(-20deg);
+          -moz-transform: skew(-20deg);
+          -o-transform: skew(-20deg);
+          transform: skew(-20deg);
+          span {
+            display: inline-block;
+            padding: 5px;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            -webkit-transform: skew(20deg);
+            -moz-transform: skew(20deg);
+            -o-transform: skew(20deg);
+            transform: skew(20deg);
+          }
+        }
+        .title {
+          margin: 20px 10px;
+          text-align: center;
+          font-weight: 300;
         }
       }
-      .title {
-        margin: 20px 10px;
-        text-align: center;
-        font-weight: 300;
-      }
-    }
-    .vhr {
-      margin-top: 20px;
-      border: 1px solid transparent;
-      @media (min-width: 475px) {
-        border: 1px solid darkgray;
-      }
-      &:last-child {
+      .vhr {
+        margin-top: 20px;
         border: 1px solid transparent;
+        @media (min-width: 475px) {
+          border: 1px solid #dddddd;
+        }
+        &:last-child {
+          border: 1px solid transparent;
+        }
       }
     }
   }
