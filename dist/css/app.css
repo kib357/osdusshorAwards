@@ -431,7 +431,7 @@ h6 {
 .landing .stages .stages-list .stage {
   width: 220px;
 }
-.landing .stages .stages-list .stage .number {
+.landing .stages .stages-list .stage .stage-number {
   margin: 20px auto 0;
   width: 130px;
   background-color: #00983a;
@@ -441,7 +441,10 @@ h6 {
   -o-transform: skew(-20deg);
   transform: skew(-20deg);
 }
-.landing .stages .stages-list .stage .number span {
+.landing .stages .stages-list .stage .stage-number.future {
+  background-color: #27348b;
+}
+.landing .stages .stages-list .stage .stage-number span {
   display: inline-block;
   padding: 5px;
   color: white;

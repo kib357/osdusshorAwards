@@ -291,10 +291,13 @@ h1, h2, h3, h4, h5, h6 {
       }
       .stage {
         width: 220px;
-        .number {
+        .stage-number {
           margin: 20px auto 0;
           width: 130px;
           background-color: @baseGreen;
+          &.future {
+            background-color: @baseBlue;
+          }
           text-align: center;
           -webkit-transform: skew(-20deg);
           -moz-transform: skew(-20deg);
