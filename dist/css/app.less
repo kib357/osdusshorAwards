@@ -143,24 +143,28 @@ h1, h2, h3, h4, h5, h6 {
   background: #000;
 }
 
+@fixed-width: 630px;
+
 .jumbo-1 {
-  height: 150px;
+  padding: 30px 0;
+  .title {
+    margin: 0 auto;
+    width: @fixed-width;
+  }
 }
 
 .jumbo-2 {
   background-color: @baseGreen;
-  padding: 40px 0;
+  padding: 30px 0;
   .carousel {
     margin: 0 auto;
-    width: 630px;
+    width: @fixed-width;
     height: 420px;
-    background-color: @baseBlue;
-    border: solid 4px white;
   }
 }
 
 .list-block {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 20px;
   .container {
     position: relative;
@@ -170,15 +174,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   h2 {
     text-transform: uppercase;
-    margin-left: 90px;
+    margin-left: 110px;
     padding-top: 15px;
-    padding-bottom: 35px;
+    padding-bottom: 50px;
   }
 }
 
 .nominations {
   .img-header {
-    left: 20px;
+    left: 30px;
   }
   h2 {
     color: @baseBlue;
@@ -191,12 +195,70 @@ h1, h2, h3, h4, h5, h6 {
 .goals {
   background-color: #eeeeee;
   .img-header {
-    left: 20px;
+    left: 30px;
   }
   h2 {
     color: @baseGreen;
   }
   .circle {
     background-color: @baseGreen;
+  }
+}
+
+.stages {
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  h2 {
+    color: @baseBlue;
+    text-transform: uppercase;
+  }
+  .stages-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    & > div {
+      flex-shrink: 0;
+    }
+    .stage {
+      width: 220px;
+      .number {
+        margin: 20px auto 0;
+        width: 130px;
+        background-color: @baseGreen;
+        text-align: center;
+        -webkit-transform: skew(-20deg);
+        -moz-transform: skew(-20deg);
+        -o-transform: skew(-20deg);
+        transform: skew(-20deg);
+        span {
+          display: inline-block;
+          padding: 5px;
+          color: white;
+          font-size: 18px;
+          font-weight: 500;
+          -webkit-transform: skew(20deg);
+          -moz-transform: skew(20deg);
+          -o-transform: skew(20deg);
+          transform: skew(20deg);
+        }
+      }
+      .title {
+        margin: 20px 10px;
+        text-align: center;
+        font-weight: 300;
+      }
+    }
+    .vhr {
+      margin-top: 20px;
+      border: 1px solid transparent;
+      @media (min-width: 475px) {
+        border: 1px solid darkgray;
+      }
+      &:last-child {
+        border: 1px solid transparent;
+      }
+    }
   }
 }

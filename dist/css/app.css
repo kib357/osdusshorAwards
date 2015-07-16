@@ -285,21 +285,23 @@ h6 {
   background: #000;
 }
 .jumbo-1 {
-  height: 150px;
+  padding: 30px 0;
+}
+.jumbo-1 .title {
+  margin: 0 auto;
+  width: 630px;
 }
 .jumbo-2 {
   background-color: #00983a;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 .jumbo-2 .carousel {
   margin: 0 auto;
   width: 630px;
   height: 420px;
-  background-color: #27348b;
-  border: solid 4px white;
 }
 .list-block {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 .list-block .container {
@@ -310,12 +312,12 @@ h6 {
 }
 .list-block h2 {
   text-transform: uppercase;
-  margin-left: 90px;
+  margin-left: 110px;
   padding-top: 15px;
-  padding-bottom: 35px;
+  padding-bottom: 50px;
 }
 .nominations .img-header {
-  left: 20px;
+  left: 30px;
 }
 .nominations h2 {
   color: #27348b;
@@ -327,11 +329,69 @@ h6 {
   background-color: #eeeeee;
 }
 .goals .img-header {
-  left: 20px;
+  left: 30px;
 }
 .goals h2 {
   color: #00983a;
 }
 .goals .circle {
   background-color: #00983a;
+}
+.stages {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.stages h2 {
+  color: #27348b;
+  text-transform: uppercase;
+}
+.stages .stages-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.stages .stages-list > div {
+  flex-shrink: 0;
+}
+.stages .stages-list .stage {
+  width: 220px;
+}
+.stages .stages-list .stage .number {
+  margin: 20px auto 0;
+  width: 130px;
+  background-color: #00983a;
+  text-align: center;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
+}
+.stages .stages-list .stage .number span {
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -o-transform: skew(20deg);
+  transform: skew(20deg);
+}
+.stages .stages-list .stage .title {
+  margin: 20px 10px;
+  text-align: center;
+  font-weight: 300;
+}
+.stages .stages-list .vhr {
+  margin-top: 20px;
+  border: 1px solid transparent;
+}
+@media (min-width: 475px) {
+  .stages .stages-list .vhr {
+    border: 1px solid darkgray;
+  }
+}
+.stages .stages-list .vhr:last-child {
+  border: 1px solid transparent;
 }
