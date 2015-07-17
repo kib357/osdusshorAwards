@@ -158,7 +158,7 @@
 }
 body {
   padding-top: 50px;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 .disable-hover {
@@ -510,11 +510,6 @@ h6 {
 }
 @media (min-width: 768px) {
   .contacts .contacts-text {
-    font-size: 24px;
-  }
-}
-@media (min-width: 992px) {
-  .contacts .contacts-text {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
