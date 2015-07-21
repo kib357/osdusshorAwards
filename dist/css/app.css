@@ -530,7 +530,7 @@ h6 {
 }
 .landing .partners .left a {
   display: inline-block;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 @media (min-width: 700px) {
   .landing .partners .left {
