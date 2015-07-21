@@ -8,7 +8,7 @@
     var body = document.body,
         scrollTimer,
         slideTimer,
-        slidesCount = 2,
+        slidesCount = 6,
         nextSlideInterval = 7000;
 
     var showSlide = function (slideNumber) {

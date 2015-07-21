@@ -143,19 +143,6 @@
   src: url('../fonts/Roboto-BlackItalic.eot');
   src: url('../fonts/Roboto-BlackItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-BlackItalic.woff2') format('woff2'), url('../fonts/Roboto-BlackItalic.woff') format('woff'), url('../fonts/Roboto-BlackItalic.ttf') format('truetype'), url('../fonts/Roboto-BlackItalic.svg#Roboto') format('svg');
 }
-#c-slide-1 span {
-  position: absolute;
-  bottom: 55px;
-  text-align: center;
-  color: white;
-  right: 10px;
-  font-size: 1.5vw;
-}
-@media (min-width: 730px) {
-  #c-slide-1 span {
-    font-size: 11px;
-  }
-}
 body {
   padding-top: 50px;
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -317,19 +304,33 @@ h6 {
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear;
 }
-.carousel .c-slide img {
-  width: 100%;
-}
 .carousel .c-slide:first-child {
   position: inherit;
 }
 .carousel .c-slide.active {
   opacity: 1;
 }
+.carousel .c-slide img {
+  width: 100%;
+}
+.carousel .c-slide span {
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+  color: white;
+  right: 35px;
+  font-size: 1.6vw;
+  text-shadow: #777777 1px 0 0, #777777 0 1px 0, #777777 -1px 0 0, #777777 0 -1px 0;
+}
+@media (min-width: 730px) {
+  .carousel .c-slide span {
+    font-size: 12px;
+  }
+}
 .carousel .c-indicators {
   position: absolute;
   bottom: 15px;
-  right: 10%;
+  right: 9%;
   z-index: 15;
   padding-left: 0;
   text-align: center;
@@ -386,10 +387,10 @@ h6 {
   margin: 0 auto;
   width: 90%;
 }
-@media (min-width: 700px) {
+@media (min-width: 970px) {
   .landing .jumbo-2 .carousel-container {
-    width: 630px;
-    height: 420px;
+    width: 930px;
+    height: 520px;
   }
 }
 .landing .list-block .container {
@@ -498,6 +499,84 @@ h6 {
   -moz-transform: skew(-20deg);
   -o-transform: skew(-20deg);
   transform: skew(-20deg);
+}
+.landing .partners a {
+  text-decoration: none !important;
+}
+.landing .partners h3 {
+  color: #333;
+  text-transform: uppercase;
+}
+@media (min-width: 700px) {
+  .landing .partners h3:first-child {
+    margin-top: 0;
+  }
+}
+.landing .partners img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  transition: filter .2s linear;
+  -webkit-transition: filter .2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+}
+.landing .partners img:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+.landing .partners .left {
+  width: 300px;
+  text-align: center;
+}
+.landing .partners .left a {
+  display: inline-block;
+  margin: 10px 0;
+}
+@media (min-width: 700px) {
+  .landing .partners .left {
+    float: left;
+  }
+}
+@media (min-width: 700px) {
+  .landing .partners .right {
+    margin-left: 350px;
+  }
+}
+.landing .partners .right a {
+  display: inline-block;
+}
+.landing .partners .right .main a {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-right: 50px;
+}
+.landing .partners .right .main #evro {
+  position: relative;
+  margin-bottom: 26px;
+  vertical-align: text-bottom;
+}
+.landing .partners .right .main #evro:hover:after {
+  color: #000;
+}
+.landing .partners .right .main #evro:after {
+  content: "Генеральный партнер";
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -26px;
+  right: 0;
+  color: #777;
+  font-size: 20px;
+  transition: color .2s linear;
+  -webkit-transition: color .2s linear;
+}
+.landing .partners .right .info a {
+  vertical-align: middle;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.landing .partners .right .info img {
+  max-width: 200px;
+  max-height: 60px;
 }
 .contacts .map {
   margin: 20px 0;
