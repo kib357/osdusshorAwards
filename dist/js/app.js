@@ -64,4 +64,37 @@
             body.classList.remove('disable-hover')
         },500);
     }, false);
+
+    window.addEventListener('load', function() {
+        var elementId = window.location.hash.substring(1);
+        if (!elementId) {
+            return;
+        }
+        var element = document.getElementById(elementId);
+        if (element) {
+            window.scrollTo(0, element.offsetTop - 50);
+        }
+    });
+
+    function handleNavCLick (e) {
+        e.preventDefault();
+        var elementId = e.currentTarget.getAttribute('href').substring(1);
+        if (!elementId) {
+            return;
+        }
+        var element = document.getElementById(elementId);
+        //window.scrollTo(0, element.offsetTop - 50);
+        Velocity(element, "scroll", { offset: -50, mobileHA: false });
+        if(history.pushState) {
+            history.pushState(null, null, '#' + elementId);
+        }
+        else {
+            location.hash = '#' + elementId;
+        }
+    }
+
+    var navLinks = document.getElementsByClassName('index-link');
+    for (var i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener('click', handleNavCLick);
+    }
 })();

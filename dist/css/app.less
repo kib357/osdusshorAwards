@@ -65,13 +65,13 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 
     li {
-      display: flex;
-      align-items: center;
+      //display: flex;
+      //align-items: center;
       &:hover {
         background: lighten(@baseBlue, 4%);
       }
       a {
-        display: block;
+        display: inline-block;
         color: white;
         text-transform: uppercase;
         font-size: 14px;
@@ -79,9 +79,9 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.5px;
         text-decoration: none;
         outline: none;
-        padding: 0 15px;
+        padding: 15px;
         &.nav-image-link {
-          padding: 0 5px;
+          padding: 7px 5px;
           img {
             width: 35px;
             height: 35px;
@@ -121,11 +121,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     flex-shrink: 0;
     padding: 20px 15px 20px 15px;
-    cursor: pointer;
+    //cursor: pointer;
 
-    &:hover {
-      background-color: rgba(200, 200, 200, 0.2);
-    }
+    //&:hover {
+    //  background-color: rgba(200, 200, 200, 0.2);
+    //}
   }
   .ordered-block {
     position: relative;
