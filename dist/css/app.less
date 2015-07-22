@@ -52,28 +52,62 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 1;
   background-color: @baseBlue;
-  height: @navbar-height;
+
+  .navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background: transparent none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    @media (min-width: 992px) {
+      display: none;
+    }
+    .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #fff;
+    }
+    .icon-bar + .icon-bar {
+      margin-top: 4px;
+    }
+  }
 
   ul.nav {
-    display: none;
-    @media (min-width: 992px) {
-      display: flex;
+    &.collapse {
+      @media (max-width: 991px) {
+        li {
+          display: none;
+        }
+      }
     }
-    height: @navbar-height;
+    @media (min-width: 992px) {
+      li {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
     margin: 0 auto;
     padding: 0;
     list-style: none;
 
     li {
-      //display: flex;
-      //align-items: center;
+      &:first-child {
+        display: inline-block !important;
+      }
       &:hover {
         background: lighten(@baseBlue, 4%);
       }
       a {
-        display: inline-block;
+        display: block;
         color: white;
         text-transform: uppercase;
+        line-height: 20px;
         font-size: 14px;
         font-weight: 300;
         letter-spacing: 0.5px;
@@ -81,9 +115,8 @@ h1, h2, h3, h4, h5, h6 {
         outline: none;
         padding: 15px;
         &.nav-image-link {
-          padding: 7px 5px;
+          padding: 5px 15px;
           img {
-            width: 35px;
             height: 35px;
           }
         }

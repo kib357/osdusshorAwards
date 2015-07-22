@@ -189,27 +189,60 @@ h6 {
   right: 0;
   z-index: 1;
   background-color: #27348b;
-  height: 50px;
+}
+.navbar .navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: transparent none;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+@media (min-width: 992px) {
+  .navbar .navbar-toggle {
+    display: none;
+  }
+}
+.navbar .navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+}
+.navbar .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
 }
 .navbar ul.nav {
-  display: none;
-  height: 50px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
-@media (min-width: 992px) {
-  .navbar ul.nav {
-    display: flex;
+@media (max-width: 991px) {
+  .navbar ul.nav.collapse li {
+    display: none;
   }
+}
+@media (min-width: 992px) {
+  .navbar ul.nav li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.navbar ul.nav li:first-child {
+  display: inline-block !important;
 }
 .navbar ul.nav li:hover {
   background: #2b3a9b;
 }
 .navbar ul.nav li a {
-  display: inline-block;
+  display: block;
   color: white;
   text-transform: uppercase;
+  line-height: 20px;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -218,10 +251,9 @@ h6 {
   padding: 15px;
 }
 .navbar ul.nav li a.nav-image-link {
-  padding: 7px 5px;
+  padding: 5px 15px;
 }
 .navbar ul.nav li a.nav-image-link img {
-  width: 35px;
   height: 35px;
 }
 .container {
