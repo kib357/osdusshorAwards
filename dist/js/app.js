@@ -83,8 +83,8 @@
             return;
         }
         var element = document.getElementById(elementId);
-        //window.scrollTo(0, element.offsetTop - 50);
-        Velocity(element, "scroll", { offset: -50, mobileHA: false });
+        window.scrollTo(0, element.offsetTop - 50);
+        //Velocity(element, "scroll", { offset: -50, mobileHA: false });
         if(history.pushState) {
             history.pushState(null, null, '#' + elementId);
         }
