@@ -353,7 +353,7 @@ h6 {
 }
 .carousel .c-indicators {
   position: absolute;
-  bottom: 15px;
+  bottom: 2%;
   right: 9%;
   z-index: 15;
   padding-left: 0;
