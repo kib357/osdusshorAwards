@@ -578,6 +578,13 @@ h6 {
   position: relative;
   margin-bottom: 26px;
   vertical-align: text-bottom;
+  width: 310px;
+}
+@media (max-width: 450px) {
+  .landing .partners .right .main #evro {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
 }
 .landing .partners .right .main #evro:hover:after {
   color: #000;
