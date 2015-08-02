@@ -240,11 +240,8 @@ h6 {
 .navbar ul.nav li:first-child {
   display: inline-block !important;
 }
-.navbar ul.nav li:hover {
-  background: #2b3a9b;
-}
 .navbar ul.nav li a {
-  display: block;
+  display: inline-block;
   color: white;
   text-transform: uppercase;
   line-height: 20px;
@@ -254,6 +251,9 @@ h6 {
   text-decoration: none;
   outline: none;
   padding: 15px;
+}
+.navbar ul.nav li a:hover {
+  background: #2b3a9b;
 }
 .navbar ul.nav li a.nav-image-link {
   padding: 5px 15px;
@@ -353,11 +353,21 @@ h6 {
 }
 .carousel .arrow-left {
   right: 100%;
-  transform: translate(-5px, -25px);
+  transform: translate(-3px, -25px);
+}
+@media (min-width: 970px) {
+  .carousel .arrow-left {
+    transform: translate(-10px, -25px);
+  }
 }
 .carousel .arrow-right {
   left: 100%;
-  transform: translate(5px, -25px);
+  transform: translate(3px, -25px);
+}
+@media (min-width: 970px) {
+  .carousel .arrow-right {
+    transform: translate(10px, -25px);
+  }
 }
 .carousel .c-slide {
   position: absolute;
@@ -449,7 +459,7 @@ h6 {
 }
 .landing .jumbo-2 .carousel-container {
   margin: 0 auto;
-  width: 90%;
+  width: 85%;
 }
 @media (min-width: 970px) {
   .landing .jumbo-2 .carousel-container {

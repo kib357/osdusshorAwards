@@ -105,11 +105,11 @@ h1, h2, h3, h4, h5, h6 {
       &:first-child {
         display: inline-block !important;
       }
-      &:hover {
-        background: lighten(@baseBlue, 4%);
-      }
       a {
-        display: block;
+        &:hover {
+          background: lighten(@baseBlue, 4%);
+        }
+        display: inline-block;
         color: white;
         text-transform: uppercase;
         line-height: 20px;
@@ -223,11 +223,17 @@ h1, h2, h3, h4, h5, h6 {
   }
   .arrow-left {
     right: 100%;
-    transform: translate(-5px, -25px);
+    transform: translate(-3px, -25px);
+    @media (min-width: 970px) {
+      transform: translate(-10px, -25px);
+    }
   }
   .arrow-right {
     left: 100%;
-    transform: translate(5px, -25px);
+    transform: translate(3px, -25px);
+    @media (min-width: 970px) {
+      transform: translate(10px, -25px);
+    }
   }
   .c-slide {
     position: absolute;
@@ -327,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: @baseGreen !important;
     .carousel-container {
       margin: 0 auto;
-      width: 90%;
+      width: 85%;
       @media (min-width: 970px) {
         width: @fixed-width;
         height: 520px;
