@@ -244,19 +244,20 @@ h6 {
   display: inline-block;
   color: white;
   text-transform: uppercase;
-  line-height: 20px;
+  line-height: 50px;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.5px;
   text-decoration: none;
   outline: none;
-  padding: 15px;
+  padding: 0 15px;
 }
 .navbar ul.nav li a:hover {
   background: #2b3a9b;
 }
 .navbar ul.nav li a.nav-image-link {
-  padding: 5px 15px;
+  padding: 0 15px;
+  font-size: 45px;
 }
 .navbar ul.nav li a.nav-image-link img {
   height: 35px;
@@ -308,7 +309,7 @@ h6 {
   flex-shrink: 0;
   padding: 20px 15px 20px 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .two-columns > div {
     width: 49%;
   }
@@ -658,6 +659,24 @@ h6 {
 .landing .partners .right .info img {
   max-width: 200px;
   max-height: 60px;
+}
+.landing .experts .two-columns .ordered-block {
+  padding: 30px 30px 30px 0;
+  min-height: 180px;
+}
+.landing .experts .two-columns .ordered-block img {
+  position: absolute;
+  width: 120px;
+  border-radius: 50%;
+}
+.landing .experts .two-columns .ordered-block .text {
+  padding-left: 150px;
+}
+.landing .experts .two-columns .ordered-block .text p {
+  margin-top: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .contacts .map {
   margin: 20px 0;
