@@ -492,6 +492,88 @@ h6 {
     padding-bottom: 50px;
   }
 }
+.landing .nominations .nomination {
+  padding: 0 0 0 20px;
+}
+.landing .nominations .nomination h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.landing .nominations .nomination h3:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  margin-right: 15px;
+  background-color: #27348b;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
+}
+.landing .nominations .nomination .nominee {
+  position: relative;
+  display: inline-block;
+  width: 450px;
+  min-height: 160px;
+  padding: 30px 30px 30px 0;
+  vertical-align: top;
+}
+.landing .nominations .nomination .nominee > img {
+  position: absolute;
+  width: 100px;
+  border-radius: 50%;
+}
+.landing .nominations .nomination .nominee .text {
+  padding-left: 120px;
+}
+.landing .nominations .nomination .nominee .text p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward.gold {
+  background-color: #E6BE8A;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward.silver {
+  background-color: #C9C0BB;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward.bronze {
+  background-color: #CD7F32;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward img {
+  width: 40px;
+  margin: 5px;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward span {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  display: block;
+  margin-left: -100px;
+  padding: 5px;
+  width: 200px;
+  border-radius: 2px;
+  background-color: #263238;
+  color: #fff;
+  opacity: 0;
+  font-size: 12px;
+  visibility: hidden;
+  transition: opacity .3s linear, visibility 0s linear .3s;
+  -webkit-transition: opacity .3s linear, visibility 0s linear .3s;
+}
+.landing .nominations .nomination .nominee .text .rewards .reward:hover span {
+  transition: opacity .3s linear, visibility 0s linear 0s;
+  -webkit-transition: opacity .3s linear, visibility 0s linear 0s;
+  opacity: 1;
+  visibility: visible;
+}
 .landing .stages .stages-list {
   display: flex;
   justify-content: center;
