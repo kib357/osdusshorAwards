@@ -405,6 +405,40 @@ h1, h2, h3, h4, h5, h6 {
           p {
             margin-top: 0;
             margin-bottom: 10px;
+            font-size: 18px;
+          }
+          span {
+            display: block;
+            font-size: 12px;
+            line-height: 16px;
+          }
+          & > span + span {
+            margin-top: 8px;
+          }
+          .org-rewards {
+            padding-top: 8px;
+            span {
+              display: inline-block;
+              width: 30px;
+              margin-right: 8px;
+              border-radius: 50%;
+              font-size: 18px;
+              line-height: 30px;
+              text-align: center;
+              color: rgba(255,255,255,.8);
+            }
+          }
+          .pupils {
+            padding-top: 8px;
+            .pupil {
+              position: relative;
+              display: inline-block;
+              margin-right: 8px;
+              img {
+                width: 50px;
+                border-radius: 50%;
+              }
+            }
           }
           .rewards {
             .reward {
@@ -414,43 +448,47 @@ h1, h2, h3, h4, h5, h6 {
               width: 50px;
               margin-right: 14px;
               border-radius: 50%;
-              &.gold {
-                background-color: #E6BE8A;
-              }
-              &.silver {
-                background-color: #C9C0BB;
-              }
-              &.bronze {
-                background-color: #CD7F32;
-              }
               img {
                 width: 40px;
                 margin: 5px;
               }
-              span {
-                position: absolute;
-                top: 110%;
-                left: 50%;
-                display: block;
-                margin-left: -100px;
-                padding: 5px;
-                width: 200px;
-                border-radius: 2px;
-                background-color: #263238;
-                color: #fff;
-                opacity: 0;
-                font-size: 12px;
-                visibility: hidden;
-                transition: opacity .3s linear, visibility 0s linear .3s;
-                -webkit-transition: opacity .3s linear, visibility 0s linear .3s;
-              }
-              &:hover span {
-                transition: opacity .3s linear, visibility 0s linear 0s;
-                -webkit-transition: opacity .3s linear, visibility 0s linear 0s;
-                opacity: 1;
-                visibility: visible;
-              }
             }
+          }
+          .reward,
+          .pupil {
+            span {
+              position: absolute;
+              top: 110%;
+              left: 50%;
+              display: block;
+              margin-left: -100px;
+              padding: 5px;
+              width: 200px;
+              border-radius: 2px;
+              background-color: #263238;
+              color: #fff;
+              text-align: center;
+              opacity: 0;
+              font-size: 12px;
+              visibility: hidden;
+              transition: opacity .3s linear, visibility 0s linear .3s;
+              -webkit-transition: opacity .3s linear, visibility 0s linear .3s;
+            }
+            &:hover span {
+              transition: opacity .3s linear, visibility 0s linear 0s;
+              -webkit-transition: opacity .3s linear, visibility 0s linear 0s;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          .gold {
+            background-color: rgba(235, 193, 76, .5);
+          }
+          .silver {
+            background-color: rgba(158, 164, 168, .5);
+          }
+          .bronze {
+            background-color: rgba(235, 83, 55, .5);
           }
         }
       }

@@ -532,6 +532,40 @@ h6 {
 .landing .nominations .nomination .nominee .text p {
   margin-top: 0;
   margin-bottom: 10px;
+  font-size: 18px;
+}
+.landing .nominations .nomination .nominee .text span {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+}
+.landing .nominations .nomination .nominee .text > span + span {
+  margin-top: 8px;
+}
+.landing .nominations .nomination .nominee .text .org-rewards {
+  padding-top: 8px;
+}
+.landing .nominations .nomination .nominee .text .org-rewards span {
+  display: inline-block;
+  width: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+.landing .nominations .nomination .nominee .text .pupils {
+  padding-top: 8px;
+}
+.landing .nominations .nomination .nominee .text .pupils .pupil {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+.landing .nominations .nomination .nominee .text .pupils .pupil img {
+  width: 50px;
+  border-radius: 50%;
 }
 .landing .nominations .nomination .nominee .text .rewards .reward {
   position: relative;
@@ -541,20 +575,12 @@ h6 {
   margin-right: 14px;
   border-radius: 50%;
 }
-.landing .nominations .nomination .nominee .text .rewards .reward.gold {
-  background-color: #E6BE8A;
-}
-.landing .nominations .nomination .nominee .text .rewards .reward.silver {
-  background-color: #C9C0BB;
-}
-.landing .nominations .nomination .nominee .text .rewards .reward.bronze {
-  background-color: #CD7F32;
-}
 .landing .nominations .nomination .nominee .text .rewards .reward img {
   width: 40px;
   margin: 5px;
 }
-.landing .nominations .nomination .nominee .text .rewards .reward span {
+.landing .nominations .nomination .nominee .text .reward span,
+.landing .nominations .nomination .nominee .text .pupil span {
   position: absolute;
   top: 110%;
   left: 50%;
@@ -565,17 +591,28 @@ h6 {
   border-radius: 2px;
   background-color: #263238;
   color: #fff;
+  text-align: center;
   opacity: 0;
   font-size: 12px;
   visibility: hidden;
   transition: opacity .3s linear, visibility 0s linear .3s;
   -webkit-transition: opacity .3s linear, visibility 0s linear .3s;
 }
-.landing .nominations .nomination .nominee .text .rewards .reward:hover span {
+.landing .nominations .nomination .nominee .text .reward:hover span,
+.landing .nominations .nomination .nominee .text .pupil:hover span {
   transition: opacity .3s linear, visibility 0s linear 0s;
   -webkit-transition: opacity .3s linear, visibility 0s linear 0s;
   opacity: 1;
   visibility: visible;
+}
+.landing .nominations .nomination .nominee .text .gold {
+  background-color: rgba(235, 193, 76, 0.5);
+}
+.landing .nominations .nomination .nominee .text .silver {
+  background-color: rgba(158, 164, 168, 0.5);
+}
+.landing .nominations .nomination .nominee .text .bronze {
+  background-color: rgba(235, 83, 55, 0.5);
 }
 .landing .stages .stages-list {
   display: flex;
