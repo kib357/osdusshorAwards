@@ -250,7 +250,7 @@ h6 {
   letter-spacing: 0.5px;
   text-decoration: none;
   outline: none;
-  padding: 0 15px;
+  padding: 0 8px;
 }
 .navbar ul.nav li a:hover {
   background: #2b3a9b;
@@ -576,8 +576,8 @@ h6 {
   border-radius: 50%;
 }
 .landing .nominations .nomination .nominee .text .rewards .reward img {
-  width: 40px;
-  margin: 5px;
+  width: 36px;
+  margin: 7px;
 }
 .landing .nominations .nomination .nominee .text .reward span,
 .landing .nominations .nomination .nominee .text .pupil span {
